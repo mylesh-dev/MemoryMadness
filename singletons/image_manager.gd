@@ -11,7 +11,18 @@ var _item_images: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	load_item_images()
+	#load_item_images()
+	var ir: ImageFilesList = load("res://image_resources/ImageFilesList.tres")
+	for fn in ir.file_names:
+		add_file_to_list_from_resource(fn)
+
+func add_file_to_list_from_resource(fn: String) -> void:
+	var ii_dict = {
+		"item_name": fn.rstrip(".png"),
+		"item_texture": load(fn)
+	}
+	
+	_item_images.append(ii_dict)
 
 func add_file_to_list(fn: String, path: String) -> void:
 	var full_path = path + "/" + fn
