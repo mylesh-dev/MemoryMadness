@@ -9,6 +9,7 @@ func _ready():
 	on_game_exit_pressed()
 	SignalManager.on_game_exit_pressed.connect(on_game_exit_pressed)
 	SignalManager.on_level_selected.connect(on_level_selected)
+	SignalManager.on_game_over.connect(on_game_over)
 
 func show_game(s: bool) -> void:
 	game_screen.visible = s
@@ -22,3 +23,6 @@ func on_game_exit_pressed() -> void:
 func on_level_selected(level_num: int) -> void:
 	show_game(true)
 	SoundManager.play_sound(sound, SoundManager.SOUND_IN_GAME)
+	
+func on_game_over(moves: int) -> void:
+	SoundManager.play_sound(sound, SoundManager.SOUND_GAME_OVER)
