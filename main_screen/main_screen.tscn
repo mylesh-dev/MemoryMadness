@@ -38,7 +38,7 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="VB"]
 layout_mode = 2
-text = "Memory Madness
+text = "Memory Lane
 "
 label_settings = ExtResource("3_wup3v")
 horizontal_alignment = 1
@@ -64,15 +64,19 @@ theme_override_constants/separation = 72
 
 [node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("2_xn0p2")]
 layout_mode = 2
+texture = null
 
 [node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("2_xn0p2")]
 layout_mode = 2
+texture = null
 
 [node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("2_xn0p2")]
 layout_mode = 2
+texture = null
 
 [node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("2_xn0p2")]
 layout_mode = 2
+texture = null
 
 [node name="Spacer4" type="Control" parent="VB"]
 layout_mode = 2

@@ -49,11 +49,14 @@ func update_selections() -> void:
 	reveal_timer.start()
 	if selections_are_pair() == true:
 		kill_tiles()
+	else: 
+		SoundManager.play_wrong_tile_click(sound)
 
 func check_pair_made(tile:MemoryTile) -> void:
 	tile.reveal(true)
 	_selections.append(tile)
 	if _selections.size() != 2:
+		SoundManager.play_tile_click(sound)
 		return
 	
 	SignalManager.on_selection_disabled.emit()
@@ -72,7 +75,7 @@ func check_game_over() -> void:
 func on_tile_selected(tile:MemoryTile) -> void:
 	if _selections.has(tile):
 		return
-	SoundManager.play_tile_click(sound)
+	#SoundManager.play_tile_click(sound)
 	check_pair_made(tile)
 
 

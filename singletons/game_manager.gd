@@ -36,5 +36,3 @@ func get_level_selection(level_num: int) -> Dictionary:
 func clear_nodes_of_group(g_name:String) -> void:
 	for n in get_tree().get_nodes_in_group(g_name):
 		n.queue_free()
-
-

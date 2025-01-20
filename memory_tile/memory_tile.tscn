@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://djbeisufjtm4g" path="res://assets/frames/hidden_frame_blank.png" id="1_2l84w"]
 [ext_resource type="Script" path="res://memory_tile/memory_tile.gd" id="2_mavo0"]
 [ext_resource type="Texture2D" uid="uid://bwqu1pntycybc" path="res://assets/frames/blue_frame.png" id="2_ngdhq"]
-[ext_resource type="Texture2D" uid="uid://j5pj0gyjjsk7" path="res://assets/glitch/cabbage.png" id="3_c5ry0"]
+[ext_resource type="Texture2D" uid="uid://dlqn2xxntwtuw" path="res://assets/glitch/compass(1).png" id="3_c5ry0"]
 
 [node name="MemoryTile" type="TextureButton" groups=["tile"]]
 anchors_preset = 8

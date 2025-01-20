@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwawrqrilyw2f"]
 
-[ext_resource type="Texture2D" uid="uid://j5pj0gyjjsk7" path="res://assets/glitch/cabbage.png" id="1_0dxw3"]
+[ext_resource type="Texture2D" uid="uid://dlqn2xxntwtuw" path="res://assets/glitch/compass(1).png" id="1_0dxw3"]
 [ext_resource type="Script" path="res://front_sprite/front_sprite.gd" id="2_847ka"]
 
 [node name="FrontSprite" type="TextureRect"]

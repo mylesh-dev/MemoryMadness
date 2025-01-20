@@ -1,25 +1,29 @@
 #@tool
 extends Node
 
-@export var ir: ImageFilesList
+#@export var ir: ImageFilesList
+
+const PATH = "res://assets/glitch"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Engine.is_editor_hint() == true:
-		var path = "res://assets/glitch"
-		var dir = DirAccess.open(path)
+	#if Engine.is_editor_hint() == true:
+	var dir = DirAccess.open(PATH)
+	var ifl: ImageFilesList = ImageFilesList.new()
+	
+	if not dir:
+		print("ERROR: ", PATH)
+		return
+	
+	ifl.file_names.clear()
+	
+	
+	if dir:
+		var files: PackedStringArray = dir.get_files()
 		
-		if not dir:
-			print("ERROR: ", path)
-			return
-		
-		ir.file_names.clear()
-		
-		var file_names = dir.get_files()
-		
-		for fn in file_names:
+		for fn in files:
 			if ".import" not in fn:
-				ir.file_names.append(path + "/" + fn)
-		
-		ResourceSaver.save(ir)
-
+				print(fn)
+				ifl.add_filename(PATH + "/" + fn)
+			
+		ResourceSaver.save(ifl, "res://image_resources/image_files_list.tres")

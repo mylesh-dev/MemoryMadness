@@ -35,5 +35,5 @@ func on_level_selected(level_num: int) -> void:
 	scorer.clear_new_game(level_selection.target_pairs)
 
 func _on_exit_button_pressed():
-	SoundManager.play_button_click(sound)
+	SoundManager.play_exit_button_click(sound)
 	SignalManager.on_game_exit_pressed.emit()
