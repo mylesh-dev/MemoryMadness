@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5r2uekwapkfp"]
-
-[ext_resource type="Script" path="res://image_resources/image_file_maker.gd" id="1_hwnn2"]
-
-[node name="ImageFileMaker" type="Node"]
-script = ExtResource("1_hwnn2")
