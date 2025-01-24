@@ -5,13 +5,16 @@ class_name Scorer
 @onready var sound = $Sound
 @onready var reveal_timer = $RevealTimer
 
+
 var _selections: Array = []
 var _target_pairs: int = 0
 var _moves_made: int = 0
 var _pairs_made: int = 0
+var _level_number: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SignalManager.on_level_selected.connect(on_level_selected)
 	SignalManager.on_tile_selected.connect(on_tile_selected)
 	SignalManager.on_game_exit_pressed.connect(on_game_exit_pressed)
 
@@ -19,6 +22,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func on_level_selected(level_num: int) -> void:
+	_level_number = level_num
 
 func get_moves_made_str() -> String:
 	return str(_moves_made)
@@ -70,7 +76,8 @@ func hide_selections() -> void:
 
 func check_game_over() -> void:
 	if _pairs_made >= _target_pairs:
-		SignalManager.on_game_over.emit(_moves_made)
+		SignalManager.on_game_over.emit(_level_number, _moves_made)
+		SignalManager.on_update_highscore.emit()
 
 func on_tile_selected(tile:MemoryTile) -> void:
 	if _selections.has(tile):
