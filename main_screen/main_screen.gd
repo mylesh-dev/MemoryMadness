@@ -5,6 +5,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameManager.load_high_score_from_file()
 	setup_grid()
 
 func create_level_button(ln: int) -> void:

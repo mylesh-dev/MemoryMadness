@@ -25,5 +25,10 @@ func on_level_selected(level_num: int) -> void:
 	show_game(true)
 	SoundManager.play_sound(sound, SoundManager.SOUND_IN_GAME)
 	
-func on_game_over(moves: int) -> void:
+func on_game_over(lvl: int, moves: int) -> void:
 	SoundManager.play_sound(sound, SoundManager.SOUND_GAME_OVER)
+	
+	var high_score = GameManager.get_high_score(lvl);
+	if moves < high_score or high_score == 0:
+		GameManager.set_high_score(lvl, moves)
+		GameManager.save_high_score_to_file()
