@@ -5,8 +5,8 @@ extends Control
 @onready var sound = $Sound
 @onready var tile_container = $HB/MC1/TileContainer
 @onready var scorer: Scorer = $Scorer
-@onready var moves_label = $HB/MC2/VBoxContainer/HB/MovesLabel
-@onready var pairs_label = $HB/MC2/VBoxContainer/HB2/PairsLabel
+@onready var moves_label = $HB/MC2/VBoxContainer/NinePatchRect/MC/HB/MovesLabel
+@onready var pairs_label = $HB/MC2/VBoxContainer/NinePatchRect/MC/HB2/PairsLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
