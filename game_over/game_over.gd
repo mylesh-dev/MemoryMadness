@@ -14,4 +14,3 @@ func on_game_over(lvl: int, moves: int) -> void:
 func _on_exit_button_pressed():
 	hide()
 	SignalManager.on_game_exit_pressed.emit()
-	

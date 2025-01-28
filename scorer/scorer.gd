@@ -5,7 +5,6 @@ class_name Scorer
 @onready var sound = $Sound
 @onready var reveal_timer = $RevealTimer
 
-
 var _selections: Array = []
 var _target_pairs: int = 0
 var _moves_made: int = 0

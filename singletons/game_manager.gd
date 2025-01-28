@@ -13,7 +13,6 @@ var _high_scores: Dictionary = {
 	 "6": 0
 }
 
-
 const LEVELS: Dictionary = {
 	1: { "rows": 2, "cols": 2 },
 	2: { "rows": 3, "cols": 4 },
@@ -44,7 +43,6 @@ func get_level_selection(level_num: int) -> Dictionary:
 		"image_list": selected_level_images
 	}
 
-
 func clear_nodes_of_group(g_name:String) -> void:
 	for n in get_tree().get_nodes_in_group(g_name):
 		n.queue_free()
@@ -56,22 +54,20 @@ func set_high_score(lvl: int, moves: int) -> void:
 	_high_scores[str(lvl)] = moves
 
 func save_high_score_to_file() -> void:
-	var file:  FileAccess = FileAccess.open(SCORES_PATH, FileAccess.WRITE)
+	var file: FileAccess = FileAccess.open(SCORES_PATH, FileAccess.WRITE)
 	if file:
 		file.store_string(JSON.stringify(_high_scores))
 		file.close()
-		print("Saved hs")
 	else:
 		print("Failed to load file")
 
 
 func load_high_score_from_file() -> void:
-	var file:  FileAccess = FileAccess.open(SCORES_PATH, FileAccess.READ)
+	var file: FileAccess = FileAccess.open(SCORES_PATH, FileAccess.READ)
 	if file:
 		var text: String = file.get_as_text()
 		if text and text.length() > 0:
 			_high_scores = JSON.parse_string(file.get_as_text())
-			print("Loaded hs")
 		else:
 			print("File empty")
 		file.close()
