@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Memory Madness"
+config/name="Memory Lane"
 run/main_scene="res://master_scene/master_scene.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.png"
@@ -27,6 +27,7 @@ GameManager="*res://singletons/game_manager.gd"
 window/size/viewport_width=1024
 window/size/viewport_height=768
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [rendering]
 
