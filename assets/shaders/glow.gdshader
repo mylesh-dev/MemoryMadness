@@ -1,10 +1,14 @@
 shader_type canvas_item;
-//render_mode blend_premul_alpha;
+render_mode blend_mix;
+//glEnable(GL_BLEND); //
+//	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 uniform float radius = 0;
 uniform float amount = 0.7;
 
 void fragment() {
+	
+	
 	float r = radius;
 	vec2 ps = TEXTURE_PIXEL_SIZE;
 	vec4 col = texture(TEXTURE, UV);
@@ -21,7 +25,6 @@ void fragment() {
 
 	glow /= 17.0;
 	glow *= amount;
-	col.rgb *= vec4(0.6 + sin(TIME) / 8.0, 0.4, 0.4, 0.9).rgb;
-
+	col *= vec4(0.6 + sin(TIME) / 8.0, 0.4, 0.4, 0.3);
 	COLOR = glow + col;
 }

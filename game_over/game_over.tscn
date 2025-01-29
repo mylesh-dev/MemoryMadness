@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bweeusflbop5e"]
+[gd_scene load_steps=8 format=3 uid="uid://bweeusflbop5e"]
 
 [ext_resource type="Script" path="res://game_over/game_over.gd" id="1_4ap83"]
 [ext_resource type="Texture2D" uid="uid://hg6g4j8wn3pv" path="res://assets/ui/UIbg.png" id="1_ejb2e"]
 [ext_resource type="LabelSettings" uid="uid://dh3avie40we7w" path="res://assets/LG_64.tres" id="3_aaksw"]
 [ext_resource type="Texture2D" uid="uid://cusia6w3qpn33" path="res://assets/ui/level_select_frame_128.png" id="5_jvj6t"]
+[ext_resource type="Material" uid="uid://cr15ut4qg4ytn" path="res://assets/shaders/shader_material.tres" id="5_q2y3x"]
 [ext_resource type="Texture2D" uid="uid://dmpnkbcupt4eg" path="res://assets/ui/level_select_frame_hover_128.png" id="6_woqa5"]
-[ext_resource type="LabelSettings" uid="uid://oabxf4h1po58" path="res://assets/button_label.tres" id="7_xefqd"]
+[ext_resource type="LabelSettings" path="res://assets/button_label.tres" id="7_xefqd"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -80,6 +81,7 @@ custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
 [node name="ExitButton" type="TextureButton" parent="NinePatchRect/MC/VB"]
+material = ExtResource("5_q2y3x")
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("5_jvj6t")
