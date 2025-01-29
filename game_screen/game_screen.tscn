@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvadlfcjpcxmc"]
+[gd_scene load_steps=10 format=3 uid="uid://bvadlfcjpcxmc"]
 
-[ext_resource type="LabelSettings" uid="uid://oabxf4h1po58" path="res://assets/button_label.tres" id="1_co8br"]
+[ext_resource type="LabelSettings" path="res://assets/button_label.tres" id="1_co8br"]
 [ext_resource type="Script" path="res://game_screen/game_screen.gd" id="1_vm1ve"]
 [ext_resource type="PackedScene" uid="uid://cl61ym45pdhsa" path="res://memory_tile/memory_tile.tscn" id="2_3gqi0"]
 [ext_resource type="Texture2D" uid="uid://cusia6w3qpn33" path="res://assets/ui/level_select_frame_128.png" id="4_shq5p"]
+[ext_resource type="Material" uid="uid://cr15ut4qg4ytn" path="res://assets/shaders/shader_material.tres" id="5_e258j"]
 [ext_resource type="Texture2D" uid="uid://dmpnkbcupt4eg" path="res://assets/ui/level_select_frame_hover_128.png" id="5_fl1fi"]
 [ext_resource type="Texture2D" uid="uid://hg6g4j8wn3pv" path="res://assets/ui/UIbg.png" id="6_k1wdx"]
 [ext_resource type="PackedScene" uid="uid://b0wsmhuoy8hbo" path="res://scorer/scorer.tscn" id="8_gi255"]
@@ -121,10 +122,10 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
 [node name="ExitButton" type="TextureButton" parent="HB/MC2/VBoxContainer/NinePatchRect/MC"]
+material = ExtResource("5_e258j")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_shq5p")
 texture_pressed = ExtResource("4_shq5p")
 texture_hover = ExtResource("5_fl1fi")

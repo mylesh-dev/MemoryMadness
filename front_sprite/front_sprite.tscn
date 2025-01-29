@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwawrqrilyw2f"]
+[gd_scene load_steps=4 format=3 uid="uid://bwawrqrilyw2f"]
 
 [ext_resource type="Texture2D" uid="uid://dlqn2xxntwtuw" path="res://assets/glitch/compass(1).png" id="1_0dxw3"]
+[ext_resource type="Material" uid="uid://cr15ut4qg4ytn" path="res://assets/shaders/shader_material.tres" id="1_5y2u3"]
 [ext_resource type="Script" path="res://front_sprite/front_sprite.gd" id="2_847ka"]
 
 [node name="FrontSprite" type="TextureRect"]
+material = ExtResource("1_5y2u3")
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

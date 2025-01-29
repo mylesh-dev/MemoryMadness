@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl61ym45pdhsa"]
+[gd_scene load_steps=6 format=3 uid="uid://cl61ym45pdhsa"]
 
 [ext_resource type="Texture2D" uid="uid://b6bl2y6hyuwkw" path="res://assets/frames/blank_frame.png" id="1_vxjlh"]
 [ext_resource type="Script" path="res://memory_tile/memory_tile.gd" id="2_mavo0"]
 [ext_resource type="Texture2D" uid="uid://blnfco3iscw0g" path="res://assets/frames/yellow_frame.png" id="3_2civ2"]
 [ext_resource type="Texture2D" uid="uid://dlqn2xxntwtuw" path="res://assets/glitch/compass(1).png" id="3_c5ry0"]
+[ext_resource type="Material" uid="uid://cr15ut4qg4ytn" path="res://assets/shaders/shader_material.tres" id="4_05sqd"]
 
 [node name="MemoryTile" type="TextureButton" groups=["tile"]]
 anchors_preset = 8
@@ -40,6 +41,7 @@ pivot_offset = Vector2(42, 42)
 texture = ExtResource("3_2civ2")
 
 [node name="ItemImage" type="TextureRect" parent="."]
+material = ExtResource("4_05sqd")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

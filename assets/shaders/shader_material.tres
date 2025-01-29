@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cr15ut4qg4ytn"]
+
+[ext_resource type="Shader" path="res://assets/shaders/glow.gdshader" id="1_llgtr"]
+
+[resource]
+shader = ExtResource("1_llgtr")
+shader_parameter/radius = 0.0
+shader_parameter/amount = 0.9
