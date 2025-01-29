@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm0i5h46oawjc"
-path="res://.godot/imported/level_select_frame_hover_1281.png-37c96e64babc4a92250544fe00f487e6.ctex"
+uid="uid://b6bl2y6hyuwkw"
+path="res://.godot/imported/blank_frame.png-5984bc82f99a25cbb2e672d40a754698.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/level_select_frame_hover_1281.png"
-dest_files=["res://.godot/imported/level_select_frame_hover_1281.png-37c96e64babc4a92250544fe00f487e6.ctex"]
+source_file="res://assets/frames/blank_frame.png"
+dest_files=["res://.godot/imported/blank_frame.png-5984bc82f99a25cbb2e672d40a754698.ctex"]
 
 [params]
 

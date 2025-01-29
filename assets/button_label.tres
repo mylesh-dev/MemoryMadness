@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://oabxf4h1po58"]
+
+[ext_resource type="FontFile" uid="uid://cotcj54l8r11y" path="res://assets/fonts/NightPumpkind-1GpGv.ttf" id="1_vr1fc"]
+
+[resource]
+font = ExtResource("1_vr1fc")
+font_size = 25
+font_color = Color(0.339829, 0.310858, 0.492824, 1)

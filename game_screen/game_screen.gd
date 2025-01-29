@@ -5,8 +5,8 @@ extends Control
 @onready var sound = $Sound
 @onready var tile_container = $HB/MC1/TileContainer
 @onready var scorer: Scorer = $Scorer
-@onready var moves_label = $HB/MC2/VBoxContainer/HB/MovesLabel
-@onready var pairs_label = $HB/MC2/VBoxContainer/HB2/PairsLabel
+@onready var moves_label = $HB/MC2/VBoxContainer/NinePatchRect/MC/HB/MovesLabel
+@onready var pairs_label = $HB/MC2/VBoxContainer/NinePatchRect/MC/HB2/PairsLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,7 +25,7 @@ func add_memory_tile(ii_dict: Dictionary, frame_image: CompressedTexture2D) -> v
 
 func on_level_selected(level_num: int) -> void:
 	var level_selection = GameManager.get_level_selection(level_num)
-	var frame_image = ImageManager.get_random_frame_image()
+	var frame_image = ImageManager.get_frame_image()
 	
 	tile_container.columns = level_selection.num_cols
 	
