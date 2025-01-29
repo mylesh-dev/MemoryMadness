@@ -25,7 +25,7 @@ func add_memory_tile(ii_dict: Dictionary, frame_image: CompressedTexture2D) -> v
 
 func on_level_selected(level_num: int) -> void:
 	var level_selection = GameManager.get_level_selection(level_num)
-	var frame_image = ImageManager.get_random_frame_image()
+	var frame_image = ImageManager.get_frame_image()
 	
 	tile_container.columns = level_selection.num_cols
 	
