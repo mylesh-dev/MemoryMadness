@@ -7,6 +7,7 @@ extends Control
 @onready var scorer: Scorer = $Scorer
 @onready var moves_label = $HB/MC2/VBoxContainer/NinePatchRect/MC/HB/MovesLabel
 @onready var pairs_label = $HB/MC2/VBoxContainer/NinePatchRect/MC/HB2/PairsLabel
+@onready var in_game_side_menu: VBoxContainer = $HB/MC2/VBoxContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +25,7 @@ func add_memory_tile(ii_dict: Dictionary, frame_image: CompressedTexture2D) -> v
 	new_tile.setup(ii_dict, frame_image)  
 
 func on_level_selected(level_num: int) -> void:
+	in_game_side_menu.visible = true
 	var level_selection = GameManager.get_level_selection(level_num)
 	var frame_image = ImageManager.get_frame_image()
 	
