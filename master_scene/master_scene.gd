@@ -21,7 +21,7 @@ func on_game_exit_pressed() -> void:
 	SoundManager.play_exit_button_click(sound)
 	SoundManager.play_sound(sound, SoundManager.SOUND_MAIN_MENU)
 
-func on_level_selected(level_num: int) -> void:
+func on_level_selected(_level_num: int) -> void:
 	show_game(true)
 	SoundManager.play_sound(sound, SoundManager.SOUND_IN_GAME)
 	

@@ -16,3 +16,8 @@ func create_level_button(ln: int) -> void:
 func setup_grid() -> void:
 	for level in GameManager.LEVELS:
 		create_level_button(level)
+
+
+func _on_credits_button_pressed() -> void:
+	hb_levels.hide()
+	SignalManager.on_credits_button_pressed.emit()

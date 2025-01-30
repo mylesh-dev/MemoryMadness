@@ -15,7 +15,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	moves_label.text = scorer.get_moves_made_str()
 	pairs_label.text = scorer.get_pairs_made_str()
 

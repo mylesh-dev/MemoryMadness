@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://xhqiwxe4blsx"]
+[gd_scene load_steps=8 format=3 uid="uid://xhqiwxe4blsx"]
 
 [ext_resource type="Script" path="res://main_screen/main_screen.gd" id="1_odhig"]
 [ext_resource type="PackedScene" uid="uid://ckpbqwp5lyybm" path="res://level_button/level_button.tscn" id="2_5vuce"]
 [ext_resource type="PackedScene" uid="uid://bwawrqrilyw2f" path="res://front_sprite/front_sprite.tscn" id="2_xn0p2"]
+[ext_resource type="PackedScene" uid="uid://05yuk4vs7f75" path="res://credits/credits.tscn" id="3_2yry7"]
 [ext_resource type="LabelSettings" uid="uid://dh3avie40we7w" path="res://assets/LG_64.tres" id="3_wup3v"]
+[ext_resource type="FontFile" uid="uid://cotcj54l8r11y" path="res://assets/fonts/NightPumpkind-1GpGv.ttf" id="5_8mllb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j24ir"]
+font = ExtResource("5_8mllb")
+font_size = 25
+font_color = Color(0.631158, 0.607107, 0.794265, 1)
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -57,6 +64,10 @@ theme_override_constants/separation = 8
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Spacer4" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="HBSprites" type="HBoxContainer" parent="VB"]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -78,6 +89,51 @@ texture = null
 layout_mode = 2
 texture = null
 
-[node name="Spacer4" type="Control" parent="VB"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VB"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="Spacer4" type="Control" parent="VB/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CreditsButton" type="TextureButton" parent="VB/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.11
+mouse_default_cursor_shape = 2
+
+[node name="Label" type="Label" parent="VB/HBoxContainer/CreditsButton"]
+layout_mode = 2
+anchor_left = 0.056
+anchor_top = 0.081
+anchor_right = 0.961
+anchor_bottom = 0.739
+offset_left = 10.16
+offset_top = 1.274
+offset_right = -12.54
+offset_bottom = 1.006
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.11
+mouse_default_cursor_shape = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_j24ir")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" parent="." instance=ExtResource("3_2yry7")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="VB/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
