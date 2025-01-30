@@ -7,8 +7,6 @@ uniform float radius = 0;
 uniform float amount = 0.7;
 
 void fragment() {
-	
-	
 	float r = radius;
 	vec2 ps = TEXTURE_PIXEL_SIZE;
 	vec4 col = texture(TEXTURE, UV);

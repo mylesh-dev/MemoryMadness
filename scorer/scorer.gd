@@ -17,11 +17,6 @@ func _ready():
 	SignalManager.on_tile_selected.connect(on_tile_selected)
 	SignalManager.on_game_exit_pressed.connect(on_game_exit_pressed)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func on_level_selected(level_num: int) -> void:
 	_level_number = level_num
 
