@@ -6,6 +6,7 @@
 script = ExtResource("1_qj366")
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
+volume_db = -20.0
 
 [node name="RevealTimer" type="Timer" parent="."]
 wait_time = 1.2

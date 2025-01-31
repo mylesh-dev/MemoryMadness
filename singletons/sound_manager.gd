@@ -12,12 +12,12 @@ const SOUND_SELECT_BUTTON = "button"
 
 const SOUNDS = {
 	SOUND_MAIN_MENU: preload("res://assets/sounds/JDSherbert - Ambiences Music Pack - Frost Mountain Aura.mp3"),
-	SOUND_IN_GAME: preload("res://assets/sounds/JDSherbert - Minigame Music Pack - Refreshing Dawn.mp3"),
-	SOUND_SUCCESS: preload("res://assets/sounds/Big Egg collect 1.wav"),
+	SOUND_IN_GAME: preload("res://assets/sounds/Foggy Memory.mp3"),
+	SOUND_SUCCESS: preload("res://assets/sounds/tile_sound_pair.mp3"),
 	SOUND_GAME_OVER: preload("res://assets/sounds/Balloon start riding 1.wav"),
-	SOUND_SELECT_TILE: preload("res://assets/sounds/Confirm 1.wav"),
-	SOUND_SELECT_WRONG_TILE: preload("res://assets/sounds/Cancel 1.wav"),
-	SOUND_SELECT_BUTTON: preload("res://assets/sounds/Fruit collect 1.wav")
+	SOUND_SELECT_TILE: preload("res://assets/sounds/tile_sound_press.mp3"),
+	SOUND_SELECT_WRONG_TILE: preload("res://assets/sounds/tile_sound_fail.mp3"),
+	SOUND_SELECT_BUTTON: preload("res://assets/sounds/tile_sound_pair.mp3")
 }
 
 func play_sound(player: AudioStreamPlayer, key: String) -> void:
