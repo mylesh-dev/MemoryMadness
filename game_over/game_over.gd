@@ -12,10 +12,15 @@ func _ready():
 func on_game_over(lvl: int, moves: int) -> void:
 	in_game_side_menu.visible = false
 	moves_label.text = str(moves)
+	
 	var high_score = GameManager.get_high_score(lvl)
+	if moves < high_score or high_score == 0:
+		high_score = moves
+	
 	if high_score > 0:
 		highscore_label.text = "Best: %s" % high_score
 		highscore_label.visible = true
+	
 	show()
 
 func _on_exit_button_pressed():

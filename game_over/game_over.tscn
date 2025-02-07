@@ -96,6 +96,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Highscore Label" type="Label" parent="NinePatchRect/MC/VB/HB2"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Best:"
