@@ -12,12 +12,6 @@ func _ready():
 func set_random_image() -> void:
 	texture = ImageManager.get_random_item_image().item_texture
 
-func get_random_spin_time() -> float:
-	return randf_range(SPIN_TIME_RANGE.x, SPIN_TIME_RANGE.y)
-
-func get_random_rotation() -> float:
-	return deg_to_rad(randf_range(0, 360))
-
 func run_me() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_callback(set_random_image)
